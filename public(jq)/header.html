@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .tools {
+            height: 40px;
+            line-height: 40px;
+            background: #f2f2f2;
+            font-size: 14px;
+        }
+        .tools .wrap {
+            
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .tools-l {
+            float: left;
+            color: #bb682f;
+        }
+        .tools-l i {
+            float: left;
+            background: url("img/top_home.jpg") no-repeat left center;
+            width: 30px;
+            height: 40px;
+        }
+        .tools-l p{
+            float:left;
+            color:red;
+        }
+        .tools-l span{
+            float:left;
+            color:#bb682f;
+        }
+        .t{
+            float:left;
+            margin-left: 40px;
+            width: 240px;
+        }
+        .more{
+            float:left;
+        }
+        .more a{
+            text-decoration: none;
+        }
+        .tools-r{
+            float:right;
+            font-size:14px;
+        }
+        .tools-r a{
+            text-decoration: none;
+            color:#6f6f6f;
+        }
+        .header{
+            width: 1200px;
+            margin: 0 auto;
+            
+        }
+        /* 高度坍塌 */
+        .header::after{
+            content: "";
+            display:table;
+            clear:both;
+        }
+        .header .adlogo{
+            float:right;
+        }
+        .header .logo{
+            float:left;
+        }
+        .nav{
+            width: 100%;
+            background-color: #fc7b13;
+            height: 50px;
+            line-height: 50px;
+        }
+        .nav .wraps{
+            width: 1200px;
+            min-width: 1200px;
+            font-size:14px;
+            margin: 0 auto;
+        }
+        .nav .wraps .uls{
+            list-style: none;
+        }
+        .uls li{
+            float:left;
+        }
+        .uls li a{
+            text-decoration: none;
+            color:#fff;
+            font-size:18px;
+            width: 150px;
+            height: 50px;
+            display:block;
+            text-align: center;
+            transition:all 0.3s ease 0s;
+        }
+        .uls li .active{
+            background: #0581d7;
+        }
+        .uls li :hover{
+            background: #0581d7;
+        }
+        .cz_ul{
+            display: none;
+        }
+        .uls_play:hover .cz_ul{
+            display: block;
+        }
+        .cz_ul li{
+            list-style: none;
+            clear:both;
+            width: 150px;
+            height: 35px;
+            line-height: 35px;
+            display:block;
+            background: #fc7b13;
+            text-align: center;
+            border-bottom: 1px solid #f2f2f2;
+        }
+        /* 轮播 */
+        .swiper-container {
+            width: 100%;
+            height: 500px;
+        }
+        .swiper-button-prev{
+            position:absolute;
+            left:100px;
+        }
+    </style>
+    <link rel="stylesheet" href="./node_modules/swiper/dist/css/swiper.min.css">
+</head>
+
+<body>
+    <!--顶部  -->
+    <div class="tools">
+        <div class="wrap">
+            <!-- 左边 -->
+            <div class="tools-l">
+                <i></i>
+                <span>您好，欢迎访问</span>
+                <p>欢迎访问!</p>
+                <!-- 天气接口预留位置 -->
+                <div class="t">
+                    <span>天气预报</span>
+                </div>
+                <!-- 详细 -->
+                <div class="more">
+                    <a href="https://www.tianqi.com/chengdu/?tq" target="_blank">详细>></a>
+                </div>
+            </div>
+            <!-- 右边 -->
+            <div class="tools-r">
+                <a href="javascript:;">关注微信 |</a>
+                <a href="javascript:;">联系我们 |</a>
+                <a href="javascript:;">加入收藏</a>
+            </div>
+        </div>
+    </div>
+    <!-- header -->
+    <div class="header">
+        <div class="logo">
+            <img src="./img/logo.jpg" alt="">
+        </div>
+        <div class="adlogo">
+            <img src="./img/top_ad.jpg" alt="">
+        </div>
+    </div>
+    <!-- nav -->
+    <div class="nav">
+        <div class="wraps">
+            <ul class="uls">
+                <li><a href="javascript:;" class="active">网站首页</a></li>
+                <li><a href="javascript:;">川藏线</a></li>
+                <li class="uls_play">
+                    <a href="javascript:;">川西线</a>
+                    <ul  class="cz_ul">
+                        <li><a href="javascript:;">四姑娘山</a></li>
+                        <li><a href="javascript:;">格聂神山</a></li>
+                        <li><a href="javascript:;">贡嘎</a></li>
+                        <li><a href="javascript:;">九寨沟黄龙</a></li>
+                        <li><a href="javascript:;">雅拉神山</a></li>
+                        <li><a href="javascript:;">稻亚/丹巴</a></li>
+                        <li><a href="javascript:;">卡萨湖</a></li>
+                    </ul>
+                </li>
+                <li class="uls_play">
+                    <a href="javascript:;">国内线路</a>
+                    <ul class="cz_ul">
+                        <li><a href="javascript:;">兰州</a></li>
+                        <li><a href="javascript:;">赛里木湖</a></li>
+                        <li><a href="javascript:;">川滇专线</a></li>
+                        <li><a href="javascript:;">云南</a></li>
+                        <li><a href="javascript:;">西北</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">景点介绍</a></li>
+                <li><a href="javascript:;">户外资讯</a></li>
+                <li class="uls_play">
+                    <a href="javascript:;">关于候鸟</a>
+                    <ul class="cz_ul">
+                        <li><a href="javascript:;">公司简介</a></li>
+                        <li><a href="javascript:;">荣誉资质</a></li>
+                        <li><a href="javascript:;">领队风采</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:;">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 轮播 -->
+    <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./img/2015/0925/20150925090735196.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/2015/0925/20150925085027928.jpeg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/2015/0909/20150909013805181.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="./img/2015/0909/20150909012617723.jpg" alt=""></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+    
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+    
+            <!-- 如果需要滚动条 
+            <div class="swiper-scrollbar"></div>
+            -->
+    </div>
+    <script src="./node_modules/swiper/dist/js/swiper.min.js"></script>
+    <script>        
+            var mySwiper = new Swiper ('.swiper-container', {
+              //direction: 'vertical', // 垂直切换选项
+              loop: true, // 循环模式选项
+              autoplay:true,
+              delay:3000,
+              // 如果需要分页器
+              pagination: {
+                el: '.swiper-pagination',
+              },
+              // 如果需要前进后退按钮
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+              // 如果需要滚动条
+            //   scrollbar: {
+            //     el: '.swiper-scrollbar',
+            //   },
+            })   
+    </script>
+</body>
+
+</html>
